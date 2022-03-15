@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: rgb(255 255 255);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    height: 100vh;
+    /* scrollbar function */
+    overflow: hidden;
+   
+    /* display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:10px;
+    grid-auto-rows: minmax(100px, auto); */
+}
+
+.container {
+    width: 100%; 
+    height:100%;
+    /* scrolling smooth */
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.navbar {
+    position: fixed;  /* you will always see the navbar with fixed position */
+    display: flex;
+    width: 100%;
+    height: 5em;
+    top: 0;
+    background: rgb(255 0 0);
+    z-index: 1;
+}
+
+.navbar ul {
+    display: flex;  /* list items are align with flex */
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+}
+
+/* styling list items */
+.navbar ul li {
+margin: 0 1 rem;
+padding: 1rem;
+}
+
+/* styling links of the navbar  */
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase; /* hoofdletter */
+}
+
+/* animation navbar */
+.navbar ul li a:hover {
+    color: rgb(100 255 0 );
+}
+
+/* styling all sections (all pages) */
+section {
+    width: 80%; /* css animation on the left side */
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* setting h2 and paragraphs on top of each other*/
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    scroll-snap-align: center;
+
+}
+
+/* styling all h2's */
+section h2 {
+    font-size: 4rem;
+
+}
+
+section p {
+    font-size: 1.5rem;
+}
+
+/* styling the section HomePage */
+section#home {
+    background: rgb(186,255,201);
+}
+
+/* styling the section VeganPage */
+section#vegan {
+    background: rgb(0 90 90);
+}
+
+/* styling the section NutsPage */
+section#nuts {
+    background: rgb(90 90 90);
+}
+
+/* styling the section Eat timePage */
+section#eattime {
+    background: rgb(190 90 90);
+}
+
+/* horizontal scrolling, slidercontainer = in page section */
+/* aligning all slider-items in the container*/
+.slideContainer {
+    width:100%;
+    height: 50%;
+    grid-auto-columns: 25%;
+    background: purple;
+    z-index: 4;
+}
+.media-slider {
+    display: grid;
+    grid-auto-flow: column;
+    z-index: 5;
+}
+
+.media-group1 {
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+}
+
+img {
+    position: absolute;
+    width: 90px;
+    z-index: 7;
+}
+
+
+
+
+.headerbox {
+    width: 80vw;
+    height: 10em;
+    background: white;
+    position: absolute;
+    left: calc(50% - 40vw);
+    top:20%;
+    z-index: 1;
+}
+h1 {
+    font-size:3em;
+    position:absolute;
+    top:20%;
+    left:calc(50% - 1.5em);
+    z-index: 2;
+}
+  
+
+.containerGreen {
+    width: 20em;
+    height: 20em;
+    /* position: absolute; */
+    grid-column: 1 / 3;
+    grid-row: 3;
+    
+}
+
+.carrot {
+    width: 4em;
+    height: 8em;
+    top:50%;
+    left: 20%;
+    position: absolute;
+    border-radius: 51% 49% 50% 50% / 30% 33% 67% 70%;
+    background: rgb(237 145 33);  
+}
+
+.leaf1 {
+    width: 3em;
+    height: 3em;
+    background: darkgreen;
+    position: absolute;
+    top:3%;
+    left:25%;
+    border-radius:200px 0;
+}
+
+.leaf2 {
+    width: 3em;
+    height: 3em;
+    background: darkgreen;
+    position: absolute;
+    top:3%;
+    left:20%;
+    border-radius:200px 0;
+    transform: translate(45deg);
+}
+
+.leaf3 {
+    width: 3em;
+    height: 3em;
+    background: darkgreen;
+    position: absolute;
+    top:3%;
+    left:18%;
+    border-radius:0 200px ;
+}
+
+.leaf4 {
+    width: 3em;
+    height: 3em;
+    background: darkgreen;
+    position: absolute;
+    border-radius:200px 0 ;
+    left:30%;
+}
+
+.clock {
+    width:20em;
+    height:20em;
+}
+
+.circle {
+    width: 10em;
+    height:10em;
+    border-radius: 50%;
+    background: white;
+    border-style: solid;
+    border-width: .5em;
+    border-color: red;
+}
+
+.top {
+    width:.3em;
+    height:2em;
+    background: black;
+}
+
+.bottom {
+    width:.3em;
+    height:2em;
+    background: black;
+}
+
+.left {
+    width:.3em;
+    height:2em;
+    background: black;
+}
+
+.right {
+    width:.3em;
+    height:2em;
+    background: black;
+}
+
+.center {
+    width:.2em;
+    height:.2em;
+    border-radius:50%;
+    background:red;
+}
+
+.hour {
+    width:.3em;
+    height:1em ;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: pink;
+    animation-name: clock hour;
+}
