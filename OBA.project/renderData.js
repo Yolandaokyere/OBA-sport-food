@@ -1,5 +1,5 @@
 // Render data Protein
-export function render(data) {
+export function renderData(data, destination) {
     const results = data.results;
     console.dir(results);
     results.forEach((item, i) => {
@@ -12,7 +12,7 @@ export function render(data) {
                 }">
               </li>
             `;
-        const ul = document.querySelector('.media-group1 ul');
+        const ul = document.querySelector(destination);
       ul.insertAdjacentHTML('beforeend', html);
     });
   }
