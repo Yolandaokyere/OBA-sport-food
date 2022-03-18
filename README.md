@@ -23,7 +23,6 @@ Read my wiki for more details about the code
 - [x] Render data in HTML
 - [x] Modules
 - [x] Documentation > Progress pages in Wiki
-- [] Detail page
 - [x] Styling page
 - [] Good looking page
 - [] Render the next page with more data from API
@@ -32,3 +31,4 @@ Read my wiki for more details about the code
 - [] Activity diagram
 - [] WireFlow
 - [] License
+- [] Detail page
