@@ -17,6 +17,7 @@ To make a simple and user friendly web page I have chosen 3 subjects were they c
 
 ## More details
 Read my wiki for more details about the code
+https://github.com/Yolandaokyere/OBA-sport-food/wiki
 
 # To do list
 - [x] Get data from API
