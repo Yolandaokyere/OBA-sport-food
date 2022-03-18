@@ -2,7 +2,7 @@
     --eatbackground:radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     --veganbackground:linear-gradient(360deg, rgba(34,195,79,1) 0%, rgba(253,187,45,1) 100%);
     --homebackground:linear-gradient(180deg, rgba(4,2,57,1) 0%, rgba(1,36,0,1) 30%, rgba(9,9,121,1) 71%, rgba(0,212,255,1) 100%, rgba(0,212,255,1) 100%);
-    --nutsbackground:linear-gradient(180deg, rgba(195,114,34,1) 20%, rgba(34,195,79,1) 100%);
+    --proteinbackground:linear-gradient(180deg, rgba(195,114,34,1) 20%, rgba(34,195,79,1) 100%);
     --eatbackground2:linear-gradient(180deg, rgba(34,119,195,1) 20%, rgba(34,195,79,1) 100%);
     --homebackground2:linear-gradient(180deg, rgba(195,41,34,1) 20%, rgba(34,195,79,1) 100%);
     --homebackground3:linear-gradient(180deg, rgba(251,231,231,1) 30%, rgba(34,195,79,1) 100%);
@@ -14,13 +14,21 @@
     margin: 0;
     padding: 0;
 }
+
+@font-face {
+    font-family: avenir;
+    src: url(font/AvenirLTStd-Black.otf);
+}
+
+@font-face {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
     background: rgb(255 255 255);
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     height: 100vh;
-    /* scrollbar function */
-    /* overflow: hidden; */
 }
 
 main {
@@ -59,17 +67,16 @@ main {
 
 /* styling list items */
 .navbar ul li {
-    text-align: center;
-/* margin: 0 1 1 rem; */
-/* padding: 2rem; */
+    text-align: center;  
 }
 
 /* styling links of the navbar  */
 .navbar ul li a {
     text-decoration: none;
     text-transform: uppercase; /* hoofdletter */
-    /* font-size: 2em; */
     color: rgb(255 255 255);
+    font: initial;
+    font-size: 1em;
 }
 
 /* animation navbar */
@@ -93,14 +100,30 @@ section {
 
 }
 
-/* styling all h2's */
-section h2 {
-    font-size: 4rem;
+/* .oba {
+    background-image: url("./img/obaLogo.jpg");
+    background-repeat: no-repeat;
+    mix-blend-mode: darken;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-size: 120px;
+    height: 100%;
+    width: 100%;
+    background-position:left 2% top 10%;
+    position:static;
+}  */
 
+
+section h2 {
+    font-family: avenir;
+    font-size: 3em;
 }
 
 section p {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
+    inline-size: min(100% - 1rem);
 }
 
 /* styling the section HomePage */
@@ -113,12 +136,12 @@ section#vegan {
     background: var(--veganbackground);
 }
 
-/* styling the section NutsPage */
+/* styling the section ProteinPage */
 section#protein {
-    background:var(--nutsbackground);
+    background:var(--proteinbackground);
 }
 
-/* styling the section Eat timePage */
+/* styling the section Fasting Page */
 section#intermittentFasting {
     background: var(--eatbackground2);
 }
@@ -187,11 +210,12 @@ section#intermittentFasting {
 
 li {
     height: 100%;
-    width: 100%;
+    width: 100%;  
 }
 
 li img {
     border-radius: 10%;
+ 
 }
 
 li h3 {
@@ -217,7 +241,7 @@ li h4 {
 
 
 
-.headerbox {
+/* .headerbox {
     width: 80vw;
     height: 10em;
     background: white;
@@ -232,19 +256,19 @@ h1 {
     top:20%;
     left:calc(50% - 1.5em);
     z-index: 2;
-}
+} */
   
 
-.containerGreen {
+/* .containerGreen {
     width: 20em;
     height: 20em;
     /* position: absolute; */
-    grid-column: 1 / 3;
+    /* grid-column: 1 / 3;
     grid-row: 3;
     
-}
+} */ 
 
-.carrot {
+/* .carrot {
     width: 4em;
     height: 8em;
     top:50%;
@@ -349,4 +373,4 @@ h1 {
     margin: 0 auto;
     background: pink;
     animation-name: clock hour;
-}
+} */
